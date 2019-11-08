@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>jodit-squidex</Name>
+    <RootNamespace>jodit-squidex</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7247183e-2829-4e96-9933-747193c4a758</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>server.ts</StartupFile>
+    <StartWebBrowser>True</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="server.ts" />
+    <Content Include="build\jodit.css" />
+    <Content Include="build\jodit.js" />
+    <Content Include="build\jodit.min.css" />
+    <Content Include="build\jodit.min.js" />
+    <Content Include="examples\arabic.lang.html" />
+    <Content Include="examples\assets\app.css" />
+    <Content Include="examples\assets\app.js" />
+    <Content Include="examples\assets\download.jpg" />
+    <Content Include="examples\assets\icon.png" />
+    <Content Include="examples\assets\logo.png" />
+    <Content Include="examples\assets\prism.css" />
+    <Content Include="examples\assets\prism.js" />
+    <Content Include="examples\custom-icons.html" />
+    <Content Include="examples\custom-toolbar.html" />
+    <Content Include="examples\example-squidex.html" />
+    <Content Include="examples\example.default.html" />
+    <Content Include="examples\fullsize.html" />
+    <Content Include="examples\index.html" />
+    <Content Include="examples\inline-mode.html" />
+    <Content Include="examples\oneinstance.html" />
+    <Content Include="package-lock.json" />
+    <Content Include="src\styles\bundle.less" />
+    <Content Include="src\styles\icons\about.svg" />
+    <Content Include="src\styles\icons\addcolumn.svg" />
+    <Content Include="src\styles\icons\addrow.svg" />
+    <Content Include="src\styles\icons\angle-down.svg" />
+    <Content Include="src\styles\icons\angle-left.svg" />
+    <Content Include="src\styles\icons\angle-right.svg" />
+    <Content Include="src\styles\icons\angle-up.svg" />
+    <Content Include="src\styles\icons\arrows-alt.svg" />
+    <Content Include="src\styles\icons\arrows-h.svg" />
+    <Content Include="src\styles\icons\attachment.svg" />
+    <Content Include="src\styles\icons\bin.svg" />
+    <Content Include="src\styles\icons\bold.svg" />
+    <Content Include="src\styles\icons\brush.svg" />
+    <Content Include="src\styles\icons\cancel.svg" />
+    <Content Include="src\styles\icons\center.svg" />
+    <Content Include="src\styles\icons\chain-broken.svg" />
+    <Content Include="src\styles\icons\check-square.svg" />
+    <Content Include="src\styles\icons\check.svg" />
+    <Content Include="src\styles\icons\copyformat.svg" />
+    <Content Include="src\styles\icons\crop.svg" />
+    <Content Include="src\styles\icons\cut.svg" />
+    <Content Include="src\styles\icons\dedent.svg" />
+    <Content Include="src\styles\icons\dots.svg" />
+    <Content Include="src\styles\icons\dropdown-arrow.svg" />
+    <Content Include="src\styles\icons\enter.svg" />
+    <Content Include="src\styles\icons\eraser.svg" />
+    <Content Include="src\styles\icons\eye.svg" />
+    <Content Include="src\styles\icons\file.svg" />
+    <Content Include="src\styles\icons\folder.svg" />
+    <Content Include="src\styles\icons\font.svg" />
+    <Content Include="src\styles\icons\fontsize.svg" />
+    <Content Include="src\styles\icons\fullsize.svg" />
+    <Content Include="src\styles\icons\hr.svg" />
+    <Content Include="src\styles\icons\image.svg" />
+    <Content Include="src\styles\icons\indent.svg" />
+    <Content Include="src\styles\icons\info-circle.svg" />
+    <Content Include="src\styles\icons\italic.svg" />
+    <Content Include="src\styles\icons\justify.svg" />
+    <Content Include="src\styles\icons\left.svg" />
+    <Content Include="src\styles\icons\link.svg" />
+    <Content Include="src\styles\icons\lock.svg" />
+    <Content Include="src\styles\icons\menu.svg" />
+    <Content Include="src\styles\icons\merge.svg" />
+    <Content Include="src\styles\icons\ol.svg" />
+    <Content Include="src\styles\icons\omega.svg" />
+    <Content Include="src\styles\icons\outdent.svg" />
+    <Content Include="src\styles\icons\palette.svg" />
+    <Content Include="src\styles\icons\paragraph.svg" />
+    <Content Include="src\styles\icons\pencil.svg" />
+    <Content Include="src\styles\icons\plus.svg" />
+    <Content Include="src\styles\icons\print.svg" />
+    <Content Include="src\styles\icons\redo.svg" />
+    <Content Include="src\styles\icons\resize.svg" />
+    <Content Include="src\styles\icons\resizer.svg" />
+    <Content Include="src\styles\icons\right.svg" />
+    <Content Include="src\styles\icons\save.svg" />
+    <Content Include="src\styles\icons\select-all.svg" />
+    <Content Include="src\styles\icons\shrink.svg" />
+    <Content Include="src\styles\icons\source.svg" />
+    <Content Include="src\styles\icons\splitg.svg" />
+    <Content Include="src\styles\icons\splitv.svg" />
+    <Content Include="src\styles\icons\strikethrough.svg" />
+    <Content Include="src\styles\icons\subscript.svg" />
+    <Content Include="src\styles\icons\superscript.svg" />
+    <Content Include="src\styles\icons\table.svg" />
+    <Content Include="src\styles\icons\th-list.svg" />
+    <Content Include="src\styles\icons\th.svg" />
+    <Content Include="src\styles\icons\ul.svg" />
+    <Content Include="src\styles\icons\underline.svg" />
+    <Content Include="src\styles\icons\undo.svg" />
+    <Content Include="src\styles\icons\unlink.svg" />
+    <Content Include="src\styles\icons\unlock.svg" />
+    <Content Include="src\styles\icons\update.svg" />
+    <Content Include="src\styles\icons\upload.svg" />
+    <Content Include="src\styles\icons\valign.svg" />
+    <Content Include="src\styles\icons\video.svg" />
+    <Content Include="src\styles\jodit.less" />
+    <Content Include="src\styles\mixins.less" />
+    <Content Include="src\styles\modules\btn.less" />
+    <Content Include="src\styles\modules\btn_group.less" />
+    <Content Include="src\styles\modules\context_menu.less" />
+    <Content Include="src\styles\modules\dialog.less" />
+    <Content Include="src\styles\modules\dropdownlist.less" />
+    <Content Include="src\styles\modules\filebrowser\filebrowser.less" />
+    <Content Include="src\styles\modules\filebrowser\index.less" />
+    <Content Include="src\styles\modules\filebrowser\preview.less" />
+    <Content Include="src\styles\modules\grid.less" />
+    <Content Include="src\styles\modules\icon.less" />
+    <Content Include="src\styles\modules\image_editor.less" />
+    <Content Include="src\styles\modules\loader.png" />
+    <Content Include="src\styles\modules\properties.less" />
+    <Content Include="src\styles\modules\resizer.png" />
+    <Content Include="src\styles\modules\statusbar.less" />
+    <Content Include="src\styles\modules\toolbar\index.less" />
+    <Content Include="src\styles\modules\toolbar\toolbar.less" />
+    <Content Include="src\styles\modules\uploader.less" />
+    <Content Include="src\styles\plugins\add-new-line.less" />
+    <Content Include="src\styles\plugins\errorsMessages.less" />
+    <Content Include="src\styles\plugins\fullsize.less" />
+    <Content Include="src\styles\plugins\paste-storage.less" />
+    <Content Include="src\styles\plugins\placeholder.less" />
+    <Content Include="src\styles\plugins\popupInline.less" />
+    <Content Include="src\styles\plugins\resizer.less" />
+    <Content Include="src\styles\plugins\search.less" />
+    <Content Include="src\styles\plugins\size.less" />
+    <Content Include="src\styles\plugins\source.less" />
+    <Content Include="src\styles\plugins\sticky.less" />
+    <Content Include="src\styles\plugins\symbols.less" />
+    <Content Include="src\styles\plugins\table.less" />
+    <Content Include="src\styles\plugins\texticons.less" />
+    <Content Include="src\styles\plugins\widget.less" />
+    <Content Include="src\styles\reset.less" />
+    <Content Include="src\styles\themes\dark.less" />
+    <Content Include="src\styles\variables.less" />
+    <Content Include="src\styles\widgets\about.less" />
+    <Content Include="src\styles\widgets\colorpicker.less" />
+    <Content Include="src\styles\widgets\form.less" />
+    <Content Include="src\styles\widgets\ok.svg" />
+    <Content Include="src\styles\widgets\progressbar.less" />
+    <Content Include="src\styles\widgets\tabs.less" />
+    <Content Include="src\utils\lang-loader.js" />
+    <Content Include="test\bootstrap.js" />
+    <Content Include="test\test.html" />
+    <Content Include="test\test.index.html" />
+    <Content Include="test\tests\artio.jpg" />
+    <Content Include="test\tests\clipboardTest.js" />
+    <Content Include="test\tests\commandsTest.js" />
+    <Content Include="test\tests\dialogTest.js" />
+    <Content Include="test\tests\domTest.js" />
+    <Content Include="test\tests\editorTest.js" />
+    <Content Include="test\tests\enterTest.js" />
+    <Content Include="test\tests\eventsTest.js" />
+    <Content Include="test\tests\filebrowserTest.js" />
+    <Content Include="test\tests\i18nTest.js" />
+    <Content Include="test\tests\iframeTest.js" />
+    <Content Include="test\tests\imageTest.js" />
+    <Content Include="test\tests\inlineModeTest.js" />
+    <Content Include="test\tests\interfaceTest.js" />
+    <Content Include="test\tests\mirrorTest.js" />
+    <Content Include="test\tests\mobileTest.js" />
+    <Content Include="test\tests\pluginsTest.js" />
+    <Content Include="test\tests\plugins\dragAndDropElement.js" />
+    <Content Include="test\tests\plugins\indent.js" />
+    <Content Include="test\tests\plugins\size.js" />
+    <Content Include="test\tests\selectionTest.js" />
+    <Content Include="test\tests\statesTest.js" />
+    <Content Include="test\tests\tableTest.js" />
+    <Content Include="test\tests\undoredoTest.js" />
+    <Content Include="test\tests\units\testHelpers.js" />
+    <Content Include="test\tests\uploaderTest.js" />
+    <Content Include="tsconfig.json" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="build\" />
+    <Folder Include="examples\" />
+    <Folder Include="examples\assets\" />
+    <Folder Include="src\langs\" />
+    <Folder Include="src\modules\" />
+    <Folder Include="src\modules\dialog\" />
+    <Folder Include="src\modules\events\" />
+    <Folder Include="src\modules\filebrowser\" />
+    <Folder Include="src\modules\filebrowser\builders\" />
+    <Folder Include="src\modules\helpers\" />
+    <Folder Include="src\modules\helpers\array\" />
+    <Folder Include="src\modules\helpers\async\" />
+    <Folder Include="src\modules\helpers\checker\" />
+    <Folder Include="src\modules\helpers\color\" />
+    <Folder Include="src\modules\helpers\html\" />
+    <Folder Include="src\modules\helpers\normalize\" />
+    <Folder Include="src\modules\helpers\size\" />
+    <Folder Include="src\modules\helpers\string\" />
+    <Folder Include="src\modules\observer\" />
+    <Folder Include="src\modules\popup\" />
+    <Folder Include="src\modules\storage\" />
+    <Folder Include="src\modules\toolbar\" />
+    <Folder Include="src\modules\view\" />
+    <Folder Include="src\plugins\" />
+    <Folder Include="src\styles\" />
+    <Folder Include="src\styles\icons\" />
+    <Folder Include="src\styles\modules\" />
+    <Folder Include="src\styles\modules\filebrowser\" />
+    <Folder Include="src\styles\modules\toolbar\" />
+    <Folder Include="src\styles\plugins\" />
+    <Folder Include="src\styles\themes\" />
+    <Folder Include="src\styles\widgets\" />
+    <Folder Include="src\types\" />
+    <Folder Include="src\utils\" />
+    <Folder Include="test\tests\" />
+    <Folder Include="test\tests\plugins\" />
+    <Folder Include="test\tests\units\" />
+    <Folder Include="src\" />
+    <Folder Include="test\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\Config.ts" />
+    <TypeScriptCompile Include="src\constants.ts" />
+    <TypeScriptCompile Include="src\index.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\Jodit.ts" />
+    <TypeScriptCompile Include="src\langs\ar.ts" />
+    <TypeScriptCompile Include="src\langs\cs_cz.ts" />
+    <TypeScriptCompile Include="src\langs\de.ts" />
+    <TypeScriptCompile Include="src\langs\en.ts" />
+    <TypeScriptCompile Include="src\langs\es.ts" />
+    <TypeScriptCompile Include="src\langs\fr.ts" />
+    <TypeScriptCompile Include="src\langs\he.ts" />
+    <TypeScriptCompile Include="src\langs\hu.ts" />
+    <TypeScriptCompile Include="src\langs\id.ts" />
+    <TypeScriptCompile Include="src\langs\index.ts" />
+    <TypeScriptCompile Include="src\langs\it.ts" />
+    <TypeScriptCompile Include="src\langs\nl.ts" />
+    <TypeScriptCompile Include="src\langs\pt_br.ts" />
+    <TypeScriptCompile Include="src\langs\ru.ts" />
+    <TypeScriptCompile Include="src\langs\tr.ts" />
+    <TypeScriptCompile Include="src\langs\zh_cn.ts" />
+    <TypeScriptCompile Include="src\langs\zh_tw.ts" />
+    <TypeScriptCompile Include="src\modules\Ajax.ts" />
+    <TypeScriptCompile Include="src\modules\Component.ts" />
+    <TypeScriptCompile Include="src\modules\ContextMenu.ts" />
+    <TypeScriptCompile Include="src\modules\Cookie.ts" />
+    <TypeScriptCompile Include="src\modules\Create.ts" />
+    <TypeScriptCompile Include="src\modules\dialog\alert.ts" />
+    <TypeScriptCompile Include="src\modules\dialog\confirm.ts" />
+    <TypeScriptCompile Include="src\modules\dialog\dialog.ts" />
+    <TypeScriptCompile Include="src\modules\dialog\index.ts" />
+    <TypeScriptCompile Include="src\modules\dialog\promt.ts" />
+    <TypeScriptCompile Include="src\modules\Dom.ts" />
+    <TypeScriptCompile Include="src\modules\events\eventsNative.ts" />
+    <TypeScriptCompile Include="src\modules\events\observeObject.ts" />
+    <TypeScriptCompile Include="src\modules\events\store.ts" />
+    <TypeScriptCompile Include="src\modules\filebrowser\builders\contextMenu.ts" />
+    <TypeScriptCompile Include="src\modules\filebrowser\builders\item.ts" />
+    <TypeScriptCompile Include="src\modules\filebrowser\config.ts" />
+    <TypeScriptCompile Include="src\modules\filebrowser\consts.ts" />
+    <TypeScriptCompile Include="src\modules\filebrowser\dataProvider.ts" />
+    <TypeScriptCompile Include="src\modules\filebrowser\fileBrowser.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\appendScript.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\array\asArray.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\array\inArray.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\array\index.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\array\splitArray.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\async\debounce.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\async\index.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\async\setTimeout.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\async\throttle.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\browser.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\buildQuery.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\checker\hasBrowserColorPicker.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\checker\index.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\checker\isHTML.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\checker\isHTMLFromWord.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\checker\isInt.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\checker\isJoditObject.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\checker\isLicense.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\checker\isNumeric.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\checker\isPlainObject.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\checker\isURL.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\checker\isValidName.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\checker\isWindow.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\color\colorToHex.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\color\hexToRgb.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\color\index.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\completeUrl.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\convertMediaURLToVideoEmbed.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\css.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\ctrlKey.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\dataBind.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\defaultLanguage.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\each.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\extend.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\html\applyStyles.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\html\cleanFromWord.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\html\clear.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\html\htmlspecialchars.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\html\index.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\html\nl2br.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\html\stripTags.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\humanSizeToBytes.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\index.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\JoditArray.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\JoditObject.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\normalize\index.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\normalize\normalizeColor.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\normalize\normalizeKeyAliases.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\normalize\normalizeLicense.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\normalize\normalizeNode.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\normalize\normalizePath.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\normalize\normalizeRelativePath.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\normalize\normalizeSize.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\normalize\normalizeURL.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\normalize\normilizeCSSValue.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\parseQuery.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\scrollIntoView.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\selector.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\size\getContentWidth.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\size\index.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\size\innerWidth.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\size\offset.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\spy.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\string\camelCase.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\string\fromCamelCase.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\string\index.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\string\sprintf.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\string\trim.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\string\ucfirst.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\type.ts" />
+    <TypeScriptCompile Include="src\modules\helpers\val.ts" />
+    <TypeScriptCompile Include="src\modules\ImageEditor.ts" />
+    <TypeScriptCompile Include="src\modules\index.ts" />
+    <TypeScriptCompile Include="src\modules\observer\command.ts" />
+    <TypeScriptCompile Include="src\modules\observer\observer.ts" />
+    <TypeScriptCompile Include="src\modules\Plugin.ts" />
+    <TypeScriptCompile Include="src\modules\popup\list.ts" />
+    <TypeScriptCompile Include="src\modules\popup\popup.ts" />
+    <TypeScriptCompile Include="src\modules\Selection.ts" />
+    <TypeScriptCompile Include="src\modules\Snapshot.ts" />
+    <TypeScriptCompile Include="src\modules\Stack.ts" />
+    <TypeScriptCompile Include="src\modules\StatusBar.ts" />
+    <TypeScriptCompile Include="src\modules\storage\localStorageProvider.ts" />
+    <TypeScriptCompile Include="src\modules\storage\memoryStorageProvider.ts" />
+    <TypeScriptCompile Include="src\modules\storage\storage.ts" />
+    <TypeScriptCompile Include="src\modules\Table.ts" />
+    <TypeScriptCompile Include="src\modules\toolbar\break.ts" />
+    <TypeScriptCompile Include="src\modules\toolbar\button.ts" />
+    <TypeScriptCompile Include="src\modules\toolbar\collection.ts" />
+    <TypeScriptCompile Include="src\modules\toolbar\element.ts" />
+    <TypeScriptCompile Include="src\modules\toolbar\icon.ts" />
+    <TypeScriptCompile Include="src\modules\toolbar\joditToolbarCollection.ts" />
+    <TypeScriptCompile Include="src\modules\toolbar\separator.ts" />
+    <TypeScriptCompile Include="src\modules\toolbar\tooltip.ts" />
+    <TypeScriptCompile Include="src\modules\Uploader.ts" />
+    <TypeScriptCompile Include="src\modules\view\panel.ts" />
+    <TypeScriptCompile Include="src\modules\view\view.ts" />
+    <TypeScriptCompile Include="src\modules\view\viewWithToolbar.ts" />
+    <TypeScriptCompile Include="src\modules\Widget.ts" />
+    <TypeScriptCompile Include="src\plugins\add-new-line.ts" />
+    <TypeScriptCompile Include="src\plugins\autofocus.ts" />
+    <TypeScriptCompile Include="src\plugins\backspace.ts" />
+    <TypeScriptCompile Include="src\plugins\bold.ts" />
+    <TypeScriptCompile Include="src\plugins\clean-html.ts" />
+    <TypeScriptCompile Include="src\plugins\color.ts" />
+    <TypeScriptCompile Include="src\plugins\copyformat.ts" />
+    <TypeScriptCompile Include="src\plugins\drag-and-drop-element.ts" />
+    <TypeScriptCompile Include="src\plugins\drag-and-drop.ts" />
+    <TypeScriptCompile Include="src\plugins\enter.ts" />
+    <TypeScriptCompile Include="src\plugins\error-messages.ts" />
+    <TypeScriptCompile Include="src\plugins\font.ts" />
+    <TypeScriptCompile Include="src\plugins\format-block.ts" />
+    <TypeScriptCompile Include="src\plugins\fullsize.ts" />
+    <TypeScriptCompile Include="src\plugins\hotkeys.ts" />
+    <TypeScriptCompile Include="src\plugins\iframe.ts" />
+    <TypeScriptCompile Include="src\plugins\image-processor.ts" />
+    <TypeScriptCompile Include="src\plugins\image-properties.ts" />
+    <TypeScriptCompile Include="src\plugins\indent.ts" />
+    <TypeScriptCompile Include="src\plugins\index.ts" />
+    <TypeScriptCompile Include="src\plugins\inline-popup.ts" />
+    <TypeScriptCompile Include="src\plugins\justify.ts" />
+    <TypeScriptCompile Include="src\plugins\limit.ts" />
+    <TypeScriptCompile Include="src\plugins\link.ts" />
+    <TypeScriptCompile Include="src\plugins\media.ts" />
+    <TypeScriptCompile Include="src\plugins\mobile.ts" />
+    <TypeScriptCompile Include="src\plugins\orderedlist.ts" />
+    <TypeScriptCompile Include="src\plugins\paste-storage.ts" />
+    <TypeScriptCompile Include="src\plugins\paste.ts" />
+    <TypeScriptCompile Include="src\plugins\placeholder.ts" />
+    <TypeScriptCompile Include="src\plugins\redoundo.ts" />
+    <TypeScriptCompile Include="src\plugins\resizer.ts" />
+    <TypeScriptCompile Include="src\plugins\search.ts" />
+    <TypeScriptCompile Include="src\plugins\size.ts" />
+    <TypeScriptCompile Include="src\plugins\source.ts" />
+    <TypeScriptCompile Include="src\plugins\stat.ts" />
+    <TypeScriptCompile Include="src\plugins\sticky.ts" />
+    <TypeScriptCompile Include="src\plugins\symbols.ts" />
+    <TypeScriptCompile Include="src\plugins\table-keyboard-navigation.ts" />
+    <TypeScriptCompile Include="src\plugins\table.ts" />
+    <TypeScriptCompile Include="src\plugins\xpath.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+    <TypeScriptCompile Include="src\styles\icons\index.ts" />
+    <TypeScriptCompile Include="src\types\ajax.d.ts" />
+    <TypeScriptCompile Include="src\types\create.d.ts" />
+    <TypeScriptCompile Include="src\types\dialog.d.ts" />
+    <TypeScriptCompile Include="src\types\events.d.ts" />
+    <TypeScriptCompile Include="src\types\fileBrowser.d.ts" />
+    <TypeScriptCompile Include="src\types\index.d.ts" />
+    <TypeScriptCompile Include="src\types\jodit.d.ts" />
+    <TypeScriptCompile Include="src\types\toolbar.d.ts" />
+    <TypeScriptCompile Include="src\types\types.d.ts" />
+    <TypeScriptCompile Include="src\types\uploader.d.ts" />
+    <TypeScriptCompile Include="src\types\view.d.ts" />
+    <TypeScriptCompile Include="src\typings.d.ts" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
